@@ -149,8 +149,8 @@ class TripDetailPage extends StatelessWidget {
                     baseColor: Colors.grey.shade200,
                     highlightColor: Colors.white,
                     child: Container(
-                      width: double.infinity,
-                      height: 80,
+                      width: MediaQuery.of(context).size.width * 0.8,
+                      height: 250,
                       color: Colors.grey.shade200,
                     ),
                   );
@@ -158,7 +158,7 @@ class TripDetailPage extends StatelessWidget {
                 errorBuilder: (context, error, stackTrace) {
                   return Image.asset(
                     'assets/images/no_image.jpg',
-                    height: 80,
+                    height: 250,
                     fit: BoxFit.cover,
                   );
                 },
