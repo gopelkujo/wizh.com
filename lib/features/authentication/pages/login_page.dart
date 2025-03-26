@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:wizhdotcom/features/trip/pages/trip_page.dart';
 import 'package:wizhdotcom/shared/components/my_text_button.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
+
+  void _goToTripPage(BuildContext context) => Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => TripPage()),
+      );
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +22,7 @@ class LoginPage extends StatelessWidget {
               Column(
                 spacing: 16,
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [_buildTitle(), _buildForm()],
+                children: [_buildTitle(), _buildForm(context)],
               ),
               _buildRegisterText(),
             ],
@@ -38,6 +44,7 @@ class LoginPage extends StatelessWidget {
       alignment: Alignment.bottomCenter,
       child: RichText(
         text: TextSpan(
+          style: TextStyle(color: Colors.black87),
           children: [
             TextSpan(text: 'Belum memiliki akun? '),
             WidgetSpan(child: _buildRegisterButton()),
@@ -47,15 +54,21 @@ class LoginPage extends StatelessWidget {
     );
   }
 
-  Widget _buildForm() {
+  Widget _buildForm(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       spacing: 16,
       children: [
-        TextFormField(),
-        TextFormField(),
+        TextFormField(
+          keyboardType: TextInputType.emailAddress,
+          textInputAction: TextInputAction.next,
+        ),
+        TextFormField(
+          onFieldSubmitted: (_) => _goToTripPage(context),
+          obscureText: true,
+        ),
         ElevatedButton(
-          onPressed: () {},
+          onPressed: () => _goToTripPage(context),
           child: const Text('Login'),
         ),
       ],
@@ -63,6 +76,9 @@ class LoginPage extends StatelessWidget {
   }
 
   Widget _buildTitle() {
-    return Text('Wizh');
+    return Text(
+      'Wizh',
+      style: TextStyle(fontSize: 32, fontWeight: FontWeight.w500),
+    );
   }
 }
