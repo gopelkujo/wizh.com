@@ -9,4 +9,15 @@ class MyThemes {
     filled: true,
     fillColor: Colors.grey.shade300,
   );
+
+  static final elevatedButton = ElevatedButtonThemeData(
+    style: ElevatedButton.styleFrom(
+      backgroundColor: Colors.blue,
+      foregroundColor: Colors.white,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(Radius.circular(10)),
+      ),
+      elevation: 1,
+    ),
+  );
 }

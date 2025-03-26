@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue.shade700),
         useMaterial3: true,
         inputDecorationTheme: MyThemes.inputDecoration,
+        elevatedButtonTheme: MyThemes.elevatedButton,
       ),
       home: LoginPage(),
     );
