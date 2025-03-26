@@ -13,24 +13,27 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(32),
-          child: Stack(
-            alignment: Alignment.center,
-            children: [
-              Column(
-                spacing: 16,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  _buildTitle(),
-                  const SizedBox(),
-                  _buildForm(context),
-                ],
-              ),
-              _buildRegisterText(),
-            ],
+    return GestureDetector(
+      onTap: FocusManager.instance.primaryFocus?.unfocus,
+      child: Scaffold(
+        body: SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.all(32),
+            child: Stack(
+              alignment: Alignment.center,
+              children: [
+                Column(
+                  spacing: 16,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    _buildTitle(),
+                    const SizedBox(),
+                    _buildForm(context),
+                  ],
+                ),
+                _buildRegisterText(),
+              ],
+            ),
           ),
         ),
       ),
@@ -67,10 +70,16 @@ class LoginPage extends StatelessWidget {
         TextFormField(
           keyboardType: TextInputType.emailAddress,
           textInputAction: TextInputAction.next,
+          decoration: InputDecoration(
+            hintText: 'email',
+          ),
         ),
         TextFormField(
           onFieldSubmitted: (_) => _goToTripPage(context),
           obscureText: true,
+          decoration: InputDecoration(
+            hintText: 'password'
+          ),
         ),
         ElevatedButton(
           onPressed: () => _goToTripPage(context),
