@@ -9,28 +9,28 @@
   {
     "id": "2",
     "title": "Maldives Lebaran Trip",
-    "photo": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cm9hZCUyMHRyaXB8ZW58MHx8MHx8fDA%3D",
+    "photo": "https://picsum.photos/801/401",
     "price": "12000000",
     "ratings": "3.5"
   },
   {
     "id": "3",
-    "title": "String",
-    "photo": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cm9hZCUyMHRyaXB8ZW58MHx8MHx8fDA%3D",
+    "title": "Hawai Lebaran Trip",
+    "photo": "https://picsum.photos/802/402",
     "price": "12000000",
     "ratings": "4.2"
   },
   {
     "id": "4",
-    "title": "String",
-    "photo": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cm9hZCUyMHRyaXB8ZW58MHx8MHx8fDA%3D",
+    "title": "New Zealand Week Trip",
+    "photo": "https://picsum.photos/803/403",
     "price": "12000000",
     "ratings": "4.0"
   },
   {
     "id": "5",
-    "title": "String",
-    "photo": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cm9hZCUyMHRyaXB8ZW58MHx8MHx8fDA%3D",
+    "title": "Garut Beach Try Trip",
+    "photo": "https://picsum.photos/804/404",
     "price": "12000000",
     "ratings": "4.0"
   }

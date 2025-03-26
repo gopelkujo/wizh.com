@@ -5,9 +5,10 @@ import 'package:wizhdotcom/shared/components/my_text_button.dart';
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 
-  void _goToTripPage(BuildContext context) => Navigator.push(
+  void _goToTripPage(BuildContext context) => Navigator.pushAndRemoveUntil(
         context,
         MaterialPageRoute(builder: (context) => TripPage()),
+        (_) => false,
       );
 
   @override
