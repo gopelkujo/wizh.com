@@ -1,0 +1,37 @@
+[
+  {
+    "id": "1",
+    "title": "String",
+    "photo": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cm9hZCUyMHRyaXB8ZW58MHx8MHx8fDA%3D",
+    "price": "String",
+    "ratings": "Widget"
+  },
+  {
+    "id": "2",
+    "title": "String",
+    "photo": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cm9hZCUyMHRyaXB8ZW58MHx8MHx8fDA%3D",
+    "price": "String",
+    "ratings": "Widget"
+  },
+  {
+    "id": "3",
+    "title": "String",
+    "photo": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cm9hZCUyMHRyaXB8ZW58MHx8MHx8fDA%3D",
+    "price": "String",
+    "ratings": "Widget"
+  },
+  {
+    "id": "4",
+    "title": "String",
+    "photo": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cm9hZCUyMHRyaXB8ZW58MHx8MHx8fDA%3D",
+    "price": "String",
+    "ratings": "Widget"
+  },
+  {
+    "id": "5",
+    "title": "String",
+    "photo": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cm9hZCUyMHRyaXB8ZW58MHx8MHx8fDA%3D",
+    "price": "String",
+    "ratings": "Widget"
+  }
+]
