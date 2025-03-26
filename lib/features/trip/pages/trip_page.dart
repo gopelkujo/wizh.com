@@ -13,33 +13,41 @@ class TripPage extends StatelessWidget {
     return Scaffold(
       appBar: MyAppbarWidget(),
       body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            FutureBuilder<List<TripModel>>(
-              future: TripService.get(),
-              builder: (context, snapshot) {
-                if (snapshot.hasData) {
-                  return ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    itemCount: snapshot.data!.length,
-                    itemBuilder: (context, index) => TripWidget(
-                      data: snapshot.data![index],
-                    ),
-                  );
-                } else if (snapshot.hasError) {
-                  return Center(
-                    child: Padding(
-                      padding: const EdgeInsets.all(16),
-                      child: Text('${snapshot.error}'),
-                    ),
-                  );
-                }
-
-                return ListView.builder(
+        child: FutureBuilder<List<TripModel>>(
+          future: TripService.get(),
+          builder: (context, snapshot) {
+            if (snapshot.hasData) {
+              return SizedBox(
+                height: 220,
+                child: ListView.builder(
                   scrollDirection: Axis.horizontal,
-                  itemCount: 5,
-                  itemBuilder: (context, index) => Shimmer.fromColors(
+                  // shrinkWrap: true,
+                  itemCount: snapshot.data!.length,
+                  // itemBuilder: (context, index) => Container(
+                  //   width: 150,
+                  //   height: 250,
+                  //   color: Colors.grey.shade300,
+                  //   child: Text('test'),
+                  // ),
+                  itemBuilder: (context, index) => TripWidget(
+                    data: snapshot.data![index],
+                  ),
+                ),
+              );
+            } else if (snapshot.hasError) {
+              return Center(
+                child: Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: Text('${snapshot.error}'),
+                ),
+              );
+            }
+        
+            return SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  Shimmer.fromColors(
                     baseColor: Colors.grey.shade200,
                     highlightColor: Colors.white,
                     child: Container(
@@ -51,10 +59,27 @@ class TripPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                );
-              },
-            ),
-          ],
+                ],
+              ),
+            );
+        
+            // return ListView.builder(
+            //   scrollDirection: Axis.horizontal,
+            //   itemCount: 5,
+            //   itemBuilder: (context, index) => Shimmer.fromColors(
+            //     baseColor: Colors.grey.shade200,
+            //     highlightColor: Colors.white,
+            //     child: Container(
+            //       width: 300,
+            //       height: 500,
+            //       decoration: BoxDecoration(
+            //         color: Colors.grey.shade200,
+            //         borderRadius: BorderRadius.all(Radius.circular(10)),
+            //       ),
+            //     ),
+            //   ),
+            // );
+          },
         ),
       ),
     );
