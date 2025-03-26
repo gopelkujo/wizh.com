@@ -22,7 +22,11 @@ class LoginPage extends StatelessWidget {
               Column(
                 spacing: 16,
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [_buildTitle(), _buildForm(context)],
+                children: [
+                  _buildTitle(),
+                  const SizedBox(),
+                  _buildForm(context),
+                ],
               ),
               _buildRegisterText(),
             ],
@@ -76,9 +80,25 @@ class LoginPage extends StatelessWidget {
   }
 
   Widget _buildTitle() {
-    return Text(
-      'Wizh',
-      style: TextStyle(fontSize: 32, fontWeight: FontWeight.w500),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      spacing: 8,
+      children: [
+        Container(
+          width: 50,
+          height: 50,
+          decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage('assets/images/logo.png'), fit: BoxFit.cover),
+            shape: BoxShape.circle,
+          ),
+          clipBehavior: Clip.hardEdge,
+        ),
+        Text(
+          'Wizh',
+          style: TextStyle(fontSize: 32, fontWeight: FontWeight.w700),
+        ),
+      ],
     );
   }
 }
