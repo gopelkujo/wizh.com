@@ -1,0 +1,2 @@
+/Users/gopelkujo/Documents/Projects/wizh.com/android/app/.cxx/Debug/r4z3o3c1/armeabi-v7a/CMakeFiles/edit_cache.dir
+/Users/gopelkujo/Documents/Projects/wizh.com/android/app/.cxx/Debug/r4z3o3c1/armeabi-v7a/CMakeFiles/rebuild_cache.dir
